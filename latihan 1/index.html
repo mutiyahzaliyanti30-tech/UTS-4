@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Tombol Nama</title>
+</head>
+<body>
+
+    <h2 id="hasil"></h2>
+
+    <button onclick="tombol1()">Tombol1</button>
+    <button onclick="tombol2()">Tombol2</button>
+    <button onclick="reset()">Reset</button>
+
+    <script>
+        function tombol1() {
+            document.getElementById("hasil").innerHTML = "Muti";
+        }
+
+        function tombol2() {
+            document.getElementById("hasil").innerHTML = "Faiz";
+        }
+
+        function reset() {
+            document.getElementById("hasil").innerHTML = "";
+        }
+    </script>
+
+</body>
+</html>

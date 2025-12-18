@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Latihan 5</title>
+    <style>
+        button {
+            width: 50px;
+            height: 40px;
+            font-size: 18px;
+            margin: 5px;
+            background-color: purple;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>latihan5: submit</h2>
+    <p>penjumlahan sederhana</p>
+
+    <input type="number" id="angka1" placeholder="Masukkan angka 1"><br><br>
+    <input type="number" id="angka2" placeholder="Masukkan angka 2"><br><br>
+
+    <button onclick="tambah()">+</button>
+    <button onclick="kurang()">-</button>
+
+    Hasil: <span id="hasil"></span>
+
+    <script>
+        function getAngka() {
+            let a = parseFloat(document.getElementById("angka1").value);
+            let b = parseFloat(document.getElementById("angka2").value);
+            return [a, b];
+        }
+
+        function tambah() {
+            let [a, b] = getAngka();
+            document.getElementById("hasil").innerHTML = a + b;
+        }
+
+        function kurang() {
+            let [a, b] = getAngka();
+            document.getElementById("hasil").innerHTML = a - b;
+        }
+    </script>
+
+</body>
+</html>

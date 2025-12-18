@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Tombol Hover</title>
+</head>
+<body>
+
+    <button 
+        onmouseover="tombol1()" 
+        onmouseout="hapus()">
+        Button 1
+    </button>
+
+    <button 
+        onmouseover="tombol2()" 
+        onmouseout="hapus()">
+        Button 2
+    </button>
+
+    <div id="hasil"></div>
+
+    <script>
+        function tombol1() {
+            document.getElementById("hasil").innerHTML =
+                "<p>rehan tahta alfaiz</p>";
+        }
+
+        function tombol2() {
+            document.getElementById("hasil").innerHTML =
+                
+                "<p>mutiyah zaliyanti</p>";
+        }
+
+        function hapus() {
+            document.getElementById("hasil").innerHTML = "";
+        }
+    </script>
+
+</body>
+</html>
