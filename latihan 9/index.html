@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Latihan 9 </title>
+</head>
+<body>
+
+<h3>Cek Kelulusan</h3>
+
+<label>Batas Kelulusan</label><br>
+<input type="number" id="batas" ><br><br>
+
+<label>Nilai Ujian</label><br>
+<input type="number" id="nilai"><br><br>
+
+<button onclick="cekKelulusan()">Cek</button>
+
+<p id="hasil"></p>
+
+<script>
+function cekKelulusan() {
+    var batas = document.getElementById("batas").value;
+    var nilai = document.getElementById("nilai").value;
+
+    if (nilai >= batas) {
+        document.getElementById("hasil").innerHTML = "Lulus";
+    } else {
+        document.getElementById("hasil").innerHTML = "Tidak Lulus";
+    }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>latihan 7</title>
+</head>
+<body>
+
+<h3>Konversi Mata Uang</h3>
+
+<label id="labelInput">Dollar</label><br>
+<input type="number" id="input" value="0"><br><br>
+
+<button onclick="konversi()">Konversi</button>
+<button onclick="tukar()">Tukar</button>
+
+<p id="hasil">Rupiah 0</p>
+
+<script>
+    var mode = "dollar"; // mode awal
+
+    function konversi() {
+        var nilai = Number(document.getElementById("input").value);
+        var hasil = 0;
+
+        if (mode === "dollar") {
+            hasil = nilai * 15000;
+            document.getElementById("hasil").innerHTML =
+                "Rupiah " + hasil;
+        } else {
+            hasil = nilai / 15000;
+            document.getElementById("hasil").innerHTML =
+                "Dollar " + hasil;
+        }
+    }
+
+    function tukar() {
+        document.getElementById("input").value = 0;
+        document.getElementById("hasil").innerHTML = "0";
+
+        if (mode === "dollar") {
+            mode = "rupiah";
+            document.getElementById("labelInput").innerHTML = "Rupiah";
+        } else {
+            mode = "dollar";
+            document.getElementById("labelInput").innerHTML = "Dollar";
+        }
+    }
+</script>
+
+</body>
+</html>

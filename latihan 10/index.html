@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Latihan 10</title>
+</head>
+<body>
+
+<h3>Latihan Menu Toogle</h3>
+
+<button onclick="toggleMenu()">Menu</button>
+
+<div id="menuList" style="display:none; margin-top:10px;">
+    <button>menu 1</button><br>
+    <button>menu 2</button><br>
+    <button>menu 3</button>
+</div>
+
+<script>
+function toggleMenu() {
+    var menu = document.getElementById("menuList");
+
+    if (menu.style.display === "none") {
+        menu.style.display = "block";
+    } else {
+        menu.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
